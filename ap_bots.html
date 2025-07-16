@@ -28,6 +28,37 @@
                 console.log("Hi ")
             });
     </script>
+    <script>
+        function callBackend(endpoint, args) {
+            fetch('http://127.0.0.1:9000/api/' + endpoint, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(args),
+                })
+                .then(response => response.text()) // Or response.text() if expecting text
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+            console.log("Just tried to call 'http://127.0.0.1:9000/api/" + endpoint + "'")
+        }
+    </script>
+        
+        <!-- const button = document.getElementById('text_to_xlsx');
+      
+        button.addEventListener('click', function() {
+          fetch('http://127.0.0.1:9000/api/text_to_xlsx', {
+            method: 'POST', // Or GET, PUT, DELETE depending on your API
+            headers: {
+              'Content-Type': 'application/json', // If sending JSON data
+            },
+            body: JSON.stringify({ key: 'value' }), // If sending data in the request body
+          })
+          .then(response => response.json()) // Or response.text() if expecting text
+          .then(data => console.log(data))
+          .catch(error => console.error('Error:', error));
+        });
+      </script> -->
 
 </head>
 
@@ -352,46 +383,29 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-1 text-gray-800">Color Utilities</h1>
-                    <p class="mb-4">Bootstrap's default utility classes can be found on the official <a
-                            href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
-                        below were created to extend this theme past the default utility classes built into Bootstrap's
-                        framework.</p>
+                    <h1 class="h3 mb-1 text-gray-800">Accounts Payable Bots and Automations</h1>
+                    <p class="mb-4">Reach out to Thomas Cole at <a 
+                        href="mailto:Thomas.Cole@Transformco.com">Thomas.Cole@Transformco.com</a> for any questions 
+                        regarding the provided tools.
+                    </p>
 
                     <!-- Content Row -->
                     <div class="row">
 
                         <!-- First Column -->
                         <div class="col-lg-4">
-
-                            <!-- Custom Text Color Utilities -->
+                            <!-- Background Gradient Utilities -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Custom Text Color Utilities</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Custom Background Gradient Utilities
+                                    </h6>
                                 </div>
                                 <div class="card-body">
-                                    <p class="text-gray-100 p-3 bg-dark m-0">.text-gray-100</p>
-                                    <p class="text-gray-200 p-3 bg-dark m-0">.text-gray-200</p>
-                                    <p class="text-gray-300 p-3 bg-dark m-0">.text-gray-300</p>
-                                    <p class="text-gray-400 p-3 bg-dark m-0">.text-gray-400</p>
-                                    <p class="text-gray-500 p-3 m-0">.text-gray-500</p>
-                                    <p class="text-gray-600 p-3 m-0">.text-gray-600</p>
-                                    <p class="text-gray-700 p-3 m-0">.text-gray-700</p>
-                                    <p class="text-gray-800 p-3 m-0">.text-gray-800</p>
-                                    <p class="text-gray-900 p-3 m-0">.text-gray-900</p>
+                                    <button id="text_to_xlsx" onclick="callBackend('text_to_xlsx')">Daily PREISSUE_CHECKS Conversion</div>
+                                    <button id="gl_updates">General Ledger Journals</div>
                                 </div>
                             </div>
-
-                            <!-- Custom Font Size Utilities -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Custom Font Size Utilities</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p class="text-xs">.text-xs</p>
-                                    <p class="text-lg mb-0">.text-lg</p>
-                                </div>
-                            </div>
+                           
 
                         </div>
 
