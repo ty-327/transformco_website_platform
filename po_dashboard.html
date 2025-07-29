@@ -39,7 +39,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Home -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Home</span></a>
@@ -53,8 +53,8 @@
             </li>
 
             <!-- Nav Item - PO Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="po_dashboard.html">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>PO Dashboard</span></a>
             </li>
@@ -92,25 +92,48 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Welcome to the Transformco AI Platform!</h1>
-                    </div>
-
-                    <!-- Content Row -->
+                    <!-- Content Row PO/CC Individual Plot-->
                     <div class="row">
                         <div class="col-lg-12 mb-4">
                             <!-- Approach -->
                             <div class="card shadow mb-4">
-                                <div class="card-body">
-                                    <p>This website is where all AI, data analysis, automation projects are showcased.</p>
-                                    <p class="mb-0">To explore our projects, please use the sidebar on the left to navigate to the desired section.</p>
+                                <div class="card-header py-3">
+                                    <h4 class="m-0 font-weight-bold text-primary text-center">Individual PO & CC Analysis</h4>
                                 </div>
-                            </div>
+                                <div class="card-body">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe
+                                        class="embed-responsive-item"
+                                        title="PO Dashboard New"
+                                        src="https://app.powerbi.com/view?r=eyJrIjoiZjNlOTY0MmUtMDA3Mi00MTIxLWIwMDgtNjg2ZmExOTM4MzkxIiwidCI6IjI3ZTRjMTY4LTAzMjMtNDQ2My1hY2FkLTdlMTI0YjU2NjcyNiIsImMiOjN9"
+                                        frameborder="0"
+                                        allowFullScreen
+                                        ></iframe>
+                                    </div>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
 
+                    <!-- Content Row Amount Approved Plot-->
+                    <!-- <div class="row">
+                        <div class="col-lg-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">PO Amount Approved by Cost Center</h6>
+                                </div>
+                                <div class="card-body">
+                                    <img 
+                                    src="img/approved_amounts_7-25-2025.png" 
+                                    alt="PO Amount Approved by Cost Center" 
+                                    class="img-fluid w-100" 
+                                    style="object-fit:contain;"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
                 <!-- /.container-fluid -->
 
